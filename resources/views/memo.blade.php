@@ -1,5 +1,5 @@
 @extends('layouts.app')
 
 @sectio('content')
-    <h1>Titulo</h1>
+    <h1>Titulo Garka</h1>
 @endsection
