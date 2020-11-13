@@ -76,12 +76,13 @@
                             <a href="{{ route('register') }}">Register</a>
                         @endif
                     @endauth
+                    
                 </div>
             @endif
 
             <div class="content">
                 <div class="title m-b-md">
-                    <a href="{{route('inicioSesion')}}">Inicio de Sesión</a>
+                    <a href="#">Inicio de Sesión</a>
                 </div>
 
                 
