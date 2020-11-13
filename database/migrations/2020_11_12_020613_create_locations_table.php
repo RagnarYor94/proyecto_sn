@@ -15,7 +15,7 @@ class CreateLocationsTable extends Migration
     {
         Schema::create('locations', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('hotel_id')->constrained('hotels');
+            $table->foreignId('hotel_id')->constrained('hotels')->unsigned();
             $table->string('localidad_nombre');
             $table->timestamps();
         });
