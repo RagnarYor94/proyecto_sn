@@ -15,6 +15,8 @@ class CreateHotelsTable extends Migration
     {
         Schema::create('hotels', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('cadena_id')->constrained('cadenas');
+            $table->string('nombre_hotel');
             $table->timestamps();
         });
     }

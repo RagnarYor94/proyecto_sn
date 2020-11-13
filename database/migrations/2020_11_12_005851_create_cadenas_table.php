@@ -15,6 +15,7 @@ class CreateCadenasTable extends Migration
     {
         Schema::create('cadenas', function (Blueprint $table) {
             $table->id();
+            $table->string('cadena_hotelera');
             $table->timestamps();
         });
     }

@@ -15,6 +15,8 @@ class CreateRelacionsTable extends Migration
     {
         Schema::create('relacions', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('hotel_id')->constrained('hotels');
+            $table->foreignId('user_id')->constrained('users');
             $table->timestamps();
         });
     }
