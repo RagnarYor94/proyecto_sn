@@ -14,7 +14,7 @@ class CreateCadenasTable extends Migration
     public function up()
     {
         Schema::create('cadenas', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
             $table->string('cadena_hotelera');
             $table->timestamps();
         });

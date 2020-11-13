@@ -14,7 +14,7 @@ class CreateRolsTable extends Migration
     public function up()
     {
         Schema::create('rols', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
             $table->string('nombre_rol');
             $table->string('descripcion');
             $table->timestamps();

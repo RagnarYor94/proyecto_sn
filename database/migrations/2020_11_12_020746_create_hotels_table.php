@@ -14,8 +14,9 @@ class CreateHotelsTable extends Migration
     public function up()
     {
         Schema::create('hotels', function (Blueprint $table) {
-            $table->id();
-            $table->foreignId('cadena_id')->constrained('cadenas')->unsigned();
+            $table->bigIncrements('id');
+            $table->unsignedBigInteger('cadena_id');
+            $table->foreign('cadena_id')->references('id')->on('cadenas');
             $table->string('nombre_hotel');
             $table->timestamps();
         });

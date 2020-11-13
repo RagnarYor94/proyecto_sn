@@ -14,9 +14,11 @@ class CreateRelacionsTable extends Migration
     public function up()
     {
         Schema::create('relacions', function (Blueprint $table) {
-            $table->id();
-            $table->foreignId('hotel_id')->constrained('hotels')->unsigned();
-            $table->foreignId('user_id')->constrained('users')->unsigned();
+            $table->bigIncrements('id');
+            $table->unsignedBigInteger('hotel_id');
+            $table->foreign('hotel_id')->references('id')->on('hotels');
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
         });
     }
