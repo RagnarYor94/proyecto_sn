@@ -17,7 +17,7 @@ class CreateUsersTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('rol_id');
             $table->foreign('rol_id')->references('id')->on('rols');
-            $table->string('usuario');
+            $table->string('name');
             $table->string('primer_nombre');
             $table->string('apellido');
             $table->date('cumpleaños');
