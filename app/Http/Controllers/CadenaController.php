@@ -53,4 +53,8 @@ class CadenaController extends Controller
         
         return back()->with('mensaje','Se borro la cadena con exito');
     }
+    function editar($id){
+        $cadena = App\Cadena::FindOrFail($id);
+        return view('catalogoHoteles.editarCadena',compact('cadena'));
+    }
 }

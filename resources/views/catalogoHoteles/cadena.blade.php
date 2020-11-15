@@ -29,7 +29,9 @@
         <div class="card-header  bg-secondary text-white">Nombre de la Cadena</div>
         <div class="card-body text-dark">
             <h5 class="card-title">{{$item->cadena_hotelera}}</h5>
+            <a href="{{route('catalogoHoteles.editarCadena',$item)}}">
             <button class="btn btn-success">Editar</button>
+            </a>
             <form action="{{route('eliminarCadena',$item)}}" method="POST" class="d-inline">
             @method('DELETE')
             @csrf
@@ -42,6 +44,6 @@
     @endforeach
     </div>
     
-    
+    {{$cadenas->links()}}
     
 @endsection
