@@ -22,3 +22,12 @@ Auth::routes();
 Route::get('home', 'HomeController@index')->name('layouts.home');
 
 Route::get('inicioSesion', 'HomeController@inicioSesion')->name('inicioSesion');
+
+
+//RUTA DE LAS CADEAS HOTELERAS
+
+Route::get('cadena','CadenaController@vista')->name('catalogoHoteles.cadena');
+
+Route::post('guardarCadena','CadenaController@guardar')->name('guardarCadena');
+
+Route::delete('eliminarCadena/{id}','CadenaController@eliminar')->name('eliminarCadena');

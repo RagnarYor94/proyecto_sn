@@ -18,9 +18,15 @@
                             </p>
                             <div class="dropdown-menu bg-secondary rounded-lg" style="padding:0;">
                                 
-                                    <p class="border-bottom text-center text-white" style="margin:8px 0 0 0;">Cadenas hoteleras</p>
-                                    <p class="border-bottom text-center text-white" style="margin:8px 0 0 0;">Locaciones</p>
-                                    <p class="text-center text-white" style="margin:8px 0 0 0;">Hoteles</p>
+                                    <p class="border-bottom text-center text-white" style="margin:8px 0 0 0;">
+                                        <a class="text-decoration-none text-white" href="{{route('catalogoHoteles.cadena')}}">Cadenas hoteleras</a>
+                                    </p>
+                                    <p class="border-bottom text-center text-white" style="margin:8px 0 0 0;"> 
+                                        <a class="text-decoration-none text-white" href="#">Locaciones</a>
+                                    </p>
+                                    <p class="text-center text-white" style="margin:8px 0 0 0;">
+                                        <a class="text-decoration-none text-white" href="#">Hoteles</a>
+                                    </p>
                                 
                         </div>
                     </td>
