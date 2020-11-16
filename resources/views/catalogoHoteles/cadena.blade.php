@@ -2,7 +2,7 @@
 
 @section('body')
 
-    <h1 class="title mt-5">Cadena hotelera</h1>
+    <h1 class="title mt-3">Cadena hotelera</h1>
 
     <form action="{{route('guardarCadena')}}" method="POST">
     {{@csrf_field()}}
@@ -47,7 +47,7 @@
 
     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Open modal for @mdo</button>
 
-<div class="modal fade" id="editarCadena" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="editarCadena" tabindex="-1" aria-labelledby="editarCadenaLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
