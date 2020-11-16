@@ -35,3 +35,5 @@ Route::get('cadena','CadenaController@vista')->name('catalogoHoteles.cadena');
 Route::post('guardarCadena','CadenaController@guardar')->name('guardarCadena');
 
 Route::delete('eliminarCadena/{id}','CadenaController@eliminar')->name('eliminarCadena');
+
+Route::get('editarCadena/{id}','CadenaController@editar')->name('catalogoHoteles.editarCadena');
