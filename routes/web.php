@@ -21,11 +21,18 @@ Auth::routes();
 
 Route::get('home', 'HomeController@index')->name('home');
 
-Route::get('/usuarios', 'UserController@index')->name('usuarios.index');
+//Rutas de configuracion usuarios
 
-Route::get('/roles', 'RolController@index')->name('roles.index');
+Route::get('usuarios', 'UserController@index')->name('usuarios.index');
 
-Route::get('inicioSesion', 'HomeController@inicioSesion')->name('inicioSesion');
+//Rutas de configuracion de roles
+
+Route::get('roles', 'RolController@index')->name('roles.index');
+
+Route::post('roles', 'RolController@store')->name('roles.store');
+
+//Route::get('roles')
+
 
 
 //RUTA DE LAS CADEAS HOTELERAS
