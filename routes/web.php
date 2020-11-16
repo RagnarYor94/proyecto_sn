@@ -44,3 +44,11 @@ Route::post('guardarCadena','CadenaController@guardar')->name('guardarCadena');
 Route::delete('eliminarCadena/{id}','CadenaController@eliminar')->name('eliminarCadena');
 
 Route::get('editarCadena/{id}','CadenaController@editar')->name('catalogoHoteles.editarCadena');
+
+Route::put('actualizarCadena/{id}','CadenaController@actualizar')->name('actualizarCadena');
+
+Route::get('locaciones','LocationController@vista')->name('catalogoHoteles.locaciones');
+
+Route::get('hoteles','HotelController@vista')->name('catalogoHoteles.hoteles');
+
+Route::post('guardarHotel','HotelController@guardarHotel')->name('guardarHotel');
