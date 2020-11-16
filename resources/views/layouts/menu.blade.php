@@ -6,12 +6,34 @@
         <table class="table table-sm" >
             <thead>
                 <tr class="text-white text-center">
-                    <th scope="col"><span class="text-strong">Menu</span></th>
+                    <div class="dropdown text-center">
+                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Menu
+                        </a>
+
+                        <div class="dropdown-menu menu" aria-labelledby="dropdownMenuLink">
+                          <a class="dropdown-item text-white" href="#">Cadenas Hoteleras</a>
+                          <a class="dropdown-item text-white" href="#">Locaciones</a>
+                          <a class="dropdown-item text-white" href="#">Hoteles</a>
+                          <a class="dropdown-item text-white" href="{{route('usuarios.index')}}">Usuarios</a>
+                          <a class="dropdown-item text-white" href="{{route('roles.index')}}">Roles</a>
+                        </div>
+                      </div>
                 </tr>
             </thead>
             <tbody class="text-white text-center">
                 <tr>
-                    <td>Configuracion</td>
+                    <div class="dropdown text-center">
+                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Configuracion
+                        </a>
+                      
+                        <div class="dropdown-menu menu" aria-labelledby="dropdownMenuLink">
+                          <a class="dropdown-item" href="#">Action</a>
+                          <a class="dropdown-item" href="#">Another action</a>
+                          <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                      </div>
                 </tr>
             </tbody>
         </table>

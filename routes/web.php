@@ -19,6 +19,8 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('home', 'HomeController@index')->name('layouts.home');
+Route::get('home', 'HomeController@index')->name('home');
 
-Route::get('inicioSesion', 'HomeController@inicioSesion')->name('inicioSesion');
+Route::get('/usuarios', 'UserController@index')->name('usuarios.index');
+
+Route::get('/roles', 'RolController@index')->name('roles.index');

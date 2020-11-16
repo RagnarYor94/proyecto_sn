@@ -23,11 +23,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('layouts.menu');
-    }
-
-    public function inisioSesion()
-    {
-        return view('inicioSesion');
+        return view('home');
     }
 }
