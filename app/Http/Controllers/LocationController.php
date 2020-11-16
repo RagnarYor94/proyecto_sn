@@ -6,5 +6,8 @@ use Illuminate\Http\Request;
 
 class LocationController extends Controller
 {
-    //
+    function vista()
+    {
+        return view('catalogoHoteles.locaciones');
+    }
 }

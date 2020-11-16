@@ -22,10 +22,10 @@
                                         <a class="text-decoration-none text-white" href="{{route('catalogoHoteles.cadena')}}">Cadenas hoteleras</a>
                                     </p>
                                     <p class="border-bottom text-center text-white" style="margin:8px 0 0 0;"> 
-                                        <a class="text-decoration-none text-white" href="#">Locaciones</a>
+                                        <a class="text-decoration-none text-white" href="{{route('catalogoHoteles.locaciones')}}">Locaciones</a>
                                     </p>
                                     <p class="text-center text-white" style="margin:8px 0 0 0;">
-                                        <a class="text-decoration-none text-white" href="#">Hoteles</a>
+                                        <a class="text-decoration-none text-white" href="{{route('catalogoHoteles.hoteles')}}">Hoteles</a>
                                     </p>
                                 
                         </div>

@@ -57,4 +57,19 @@ class CadenaController extends Controller
         $cadena = App\Cadena::FindOrFail($id);
         return view('catalogoHoteles.editarCadena',compact('cadena'));
     }
+    function actualizar(Request $request, $id)
+    {
+        
+        // $request->validate([
+        //     'name_cadena' => 'request'
+        // ]);
+        $cadena = App\Cadena::FindOrFail($id);
+
+        $cadena->cadena_hotelera = $request->name_cadena;
+
+        $cadena->save();
+
+        return back()->with('mensaje','Registro actualizado, regresar a la pagina principal.');
+
+    }
 }
