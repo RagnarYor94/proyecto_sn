@@ -30,7 +30,14 @@
                                 
                         </div>
                     </td>
-
+                </tr>
+                <tr>
+                
+                <td>
+                        <p >
+                                Usuarios
+                        </p>
+                    </td>
                 </tr>
             </tbody>
         </table>
