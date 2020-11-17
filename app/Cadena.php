@@ -7,8 +7,8 @@ use App;
 use App\Hotel;
 class Cadena extends Model
 {
-    // public function hotels()
-    // {
-    //     return $this->hasMany('App\Hotel', '');
-    // }
+     public function hotels()
+     {
+         return $this->hasMany('App\Hotel');
+     }
 }

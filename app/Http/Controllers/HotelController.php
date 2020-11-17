@@ -11,6 +11,7 @@ class HotelController extends Controller
 {
     function vista()
     {
+        $cadena = App\Cadena::all();
         $cadena = App\Cadena::paginate();
         $hotel = App\Hotel::paginate();
 
@@ -22,7 +23,7 @@ class HotelController extends Controller
             'nombreHotel'=>'required',
             'cadenaHotelera' => 'required'
         ]);
-        $cadena = App\Cadena::paginate();
+        //$cadena = App\Cadena::paginate();
         $hotel = App\Hotel::paginate();
 
         $guardarHotel = new App\Hotel;

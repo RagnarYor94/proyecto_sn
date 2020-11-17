@@ -7,8 +7,8 @@ use App;
 use App\Cadena;
 class Hotel extends Model
 {
-    // public function cadenas()
-    // {
-    //     return $this->belongsTo('App\Cadena');
-    // }
+     public function cadens()
+    {
+         return $this->belongsTo('App\Cadena');
+    }
 }

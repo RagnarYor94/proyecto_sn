@@ -82,18 +82,6 @@
 
 
 
-<<<<<<< HEAD
-
-
-
-
-
-
     {{ $cadenas->links() }}
 
 @endsection
-=======
-    {{$cadenas->links()}}
-    
-@endsection
->>>>>>> 2aca81c9429fbbd11ce62f2544537fd69d52505a
