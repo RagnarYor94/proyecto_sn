@@ -19,9 +19,20 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('home', 'HomeController@index')->name('layouts.home');
+Route::get('home', 'HomeController@index')->name('home');
 
-Route::get('inicioSesion', 'HomeController@inicioSesion')->name('inicioSesion');
+//Rutas de configuracion usuarios
+
+Route::get('usuarios', 'UserController@index')->name('usuarios.index');
+
+//Rutas de configuracion de roles
+
+Route::get('roles', 'RolController@index')->name('roles.index');
+
+Route::post('roles', 'RolController@store')->name('roles.store');
+
+//Route::get('roles')
+
 
 
 //RUTA DE LAS CADEAS HOTELERAS

@@ -10903,3 +10903,16 @@ a.text-dark:focus {
   }
 }
 
+.menu {
+  background-color: var(--gray);
+  color: white;
+}
+
+.Rol {
+  color: #298fe2;
+}
+
+/*.formulariocreacion {
+  border: 2px solid var(--gray-dark);
+  padding: 5px;
+}
