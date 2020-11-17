@@ -11,7 +11,7 @@
             <input type="text" class="form-control" name="nombreHotel" placeholder="Ingrese el nombre de la cadena">
             <label class="text-primary p-1 font-weight-bold" for="cadenasHoteleras">Cadena Hotelera</label>
             <select class="form-control" name="cadenaHotelera" id="cadenasHoteleras">
-                <option selected></option>
+                <option selected >Seleciona una Cadena</option>
                 @foreach($cadena as $item)
                 <option value="{{$item->id}}">{{$item->cadena_hotelera}}</option>
                 @endforeach
@@ -39,11 +39,13 @@
             </tr>
         </thead>
         <tbody>
-            @foreach($hotel as $item)
+            @foreach($cadenas as $item)
             <tr>
                 <th class="text-center" scope="row">{{$item->id}}</th>
                 <td class="text-center">{{$item->nombre_hotel}}</td>
-                <td class="text-center">{{$item->cadena_id}}</td>
+                
+                <td class="text-center">{{$item->cadena_hotelera}}</td>
+                
                 <td class="text-center">Otto</td>
             </tr>
             
