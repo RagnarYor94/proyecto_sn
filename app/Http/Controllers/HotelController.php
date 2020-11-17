@@ -34,14 +34,5 @@ class HotelController extends Controller
 
         return back()->with('mensaje','Se agrego con exito el hotel');
     }
-    public function inventado()
-    {
-        $this->hotel = Hotel::with('hotels')->get();
-
-    }
-    public function inventadaDos(){
-        return view('catalogoHoteles.hoteles',[
-            'detalle_cadena'=> $this->hotel
-        ]);
-    }
+    
 }
