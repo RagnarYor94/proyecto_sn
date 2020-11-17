@@ -40,12 +40,14 @@
             </thead>
             <tbody>
                 @foreach ($hotel as $hot)
-                    <tr>
-                        <th class="text-center" scope="row">{{ $hot->id }}</th>
-                        <td class="text-center">{{ $hot->nombre_hotel }}</td>
-                        @foreach ($cadena as $cad)
+                    @foreach ($cadena as $cad)
+
+                        <tr>
+                            <th class="text-center" scope="row">{{ $hot->id }}</th>
+                            <td class="text-center">{{ $hot->nombre_hotel }}</td>
                             <td class="text-center">{{ $cad->cadena_hotelera }}</td>
-                        @endforeach
+
+                    @endforeach
                 @endforeach
                 <td><a href="" class="btn btn-warning">Editar</a></td>
                 </tr>
