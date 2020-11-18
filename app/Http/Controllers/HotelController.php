@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App;
+use DB;
 use App\Cadena;
 use App\Hotel;
 
@@ -15,7 +16,11 @@ class HotelController extends Controller
         $cadena = App\Cadena::paginate();
         $hotel = App\Hotel::paginate();
 
-        return view('catalogoHoteles.hoteles',compact('cadena','hotel'));
+        $cadenas = DB::table('cadenas')->join('hotels','hotels.cadena_id','=','cadenas.id')
+        ->select('cadenas.cadena_hotelera','hotels.nombre_hotel','hotels.id')
+        ->get();
+        
+        return view('catalogoHoteles.hoteles',compact('cadena','hotel','cadenas'));
     }
     function guardarHotel(Request $request)
     {
@@ -34,5 +39,8 @@ class HotelController extends Controller
 
         return back()->with('mensaje','Se agrego con exito el hotel');
     }
+
+    
+    
     
 }

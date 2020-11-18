@@ -39,17 +39,13 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach ($hotel as $hot)
-                    @foreach ($cadena as $cad)
-
-                        <tr>
-                            <th class="text-center" scope="row">{{ $hot->id }}</th>
-                            <td class="text-center">{{ $hot->nombre_hotel }}</td>
-                            <td class="text-center">{{ $cad->cadena_hotelera }}</td>
-
-                    @endforeach
+                @foreach ($cadenas as $cadena)
+                    <tr>
+                        <th class="text-center" scope="row">{{ $cadena->id }}</th>
+                        <td class="text-center">{{ $cadena->nombre_hotel }}</td>
+                        <td class="text-center">{{ $cadena->cadena_hotelera }}</td>
+                        <td><a href="" class="btn btn-warning">Editar</a></td>
                 @endforeach
-                <td><a href="" class="btn btn-warning">Editar</a></td>
                 </tr>
 
             </tbody>

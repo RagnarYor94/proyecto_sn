@@ -9,6 +9,6 @@ class Cadena extends Model
 {
      public function hotels()
      {
-         return $this->hasMany('App\Hotel');
+         return $this->hasMany('App\Hotel','cadena_id');
      }
 }

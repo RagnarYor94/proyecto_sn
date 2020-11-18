@@ -9,6 +9,6 @@ class Hotel extends Model
 {
      public function cadens()
     {
-         return $this->belongsTo('App\Cadena');
+         return $this->belongsTo('App\Cadena','cadena_id');
     }
 }

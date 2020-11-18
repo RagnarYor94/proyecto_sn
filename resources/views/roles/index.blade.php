@@ -40,8 +40,9 @@
                         <th scope="row" class="text-center">{{ $rol->id }}</th>
                         <td class="text-center">{{ $rol->nombre_rol }}</td>
                         <td class="text-center">{{ $rol->descripcion }}</td>
-                        <td class="text-center"><a href="" class=" btn btn-warning">Editar</a> <a href=""
-                                class="btn btn-danger">Eliminar</a>
+                        <td class="text-center">
+                            <a href="{{ route('') }}" class=" btn btn-warning">Editar</a>
+                            <a href="#" class="btn btn-danger">Eliminar</a>
                         </td>
                 </tr>
                 @endforeach
