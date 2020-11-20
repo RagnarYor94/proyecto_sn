@@ -2,6 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App;
+
+use App\Rol;
+
+use App\User;
+
+use DB;
+
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -13,7 +21,12 @@ class UserController extends Controller
      */
     public function index()
     {
-        return view('usuarios.index');
+        $users = User::all();
+
+        $usuario = DB::table('rols')->join('users','users.rol_id','=','rols.id')
+        ->select('rols.nombre_rol','users.id','users.name','users.primer_nombre','users.apellido','users.cumpleaños','users.email')
+        ->get();
+        return view('usuarios.index', compact('users', 'usuario'));
     }
 
     /**
@@ -23,7 +36,10 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        $roles = Rol::all();
+        //$usuario = Rol::find($id);
+        $users = User::all();
+        return view('usuarios.create', compact('users', 'roles'));
     }
 
     /**
@@ -56,7 +72,11 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        //
+        $roles = Rol::all();
+        $usuario = Rol::find($id);
+        $user = App\User::findOrFail($id);
+        
+        return view('usuarios.show', compact('user','usuario', 'roles'));
     }
 
     /**

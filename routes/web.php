@@ -25,11 +25,19 @@ Route::get('home', 'HomeController@index')->name('home');
 
 Route::get('usuarios', 'UserController@index')->name('usuarios.index');
 
+Route::get('usuarios/mostrar', 'UserController@create')->name('usuarios.create');
+
+Route::get('usuarios/mostrar/{id}', 'UserController@edit')->name('usuarios.edit');
+
 //Rutas de configuracion de roles
 
 Route::get('roles', 'RolController@index')->name('roles.index');
 
 Route::post('roles', 'RolController@store')->name('roles.store');
+
+Route::get('roles/mostrar/{id}', 'RolController@show')->name('roles.show');
+
+Route::put('roles/mostrar/{id}', 'RolController@update')->name('roles.update');
 
 //Route::get('roles')
 
