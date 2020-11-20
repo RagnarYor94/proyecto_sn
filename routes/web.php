@@ -24,7 +24,7 @@ Route::get('home', 'HomeController@index')->name('layouts.home');
 Route::get('inicioSesion', 'HomeController@inicioSesion')->name('inicioSesion');
 
 
-//RUTA DE LAS CADEAS HOTELERAS
+//RUTA DE LAS CADENAS HOTELERAS
 
 Route::get('cadena','CadenaController@vista')->name('catalogoHoteles.cadena');
 
@@ -38,6 +38,14 @@ Route::put('actualizarCadena/{id}','CadenaController@actualizar')->name('actuali
 
 Route::get('locaciones','LocationController@vista')->name('catalogoHoteles.locaciones');
 
+//RUTA DE HOTELES
+
 Route::get('hoteles','HotelController@vista')->name('catalogoHoteles.hoteles');
 
 Route::post('guardarHotel','HotelController@guardarHotel')->name('guardarHotel');
+
+Route::get('editarHoteles/{id}','HotelController@editarHotel')->name('catalogoHoteles.editarHoteles');
+
+Route::put('actualizarHotel/{id}','HotelController@actualizarHotel')->name('actualizarHotel');
+
+Route::delete('eliminarHotel/{id}','HotelController@eliminarHotel')->name('eliminarHotel');
