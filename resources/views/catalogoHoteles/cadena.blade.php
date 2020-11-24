@@ -32,7 +32,7 @@
             <h5 class="card-title">{{$item->cadena_hotelera}}</h5>
             <a href="{{route('catalogoHoteles.editarCadena',$item)}}">
             
-            <button type="button" class="btn btn-success">Editar</button>
+            <button type="button" class="btn btn-warning">Editar</button>
             </a>
             <form action="{{route('eliminarCadena',$item)}}" method="POST" class="d-inline">
             @method('DELETE')
@@ -47,9 +47,6 @@
     
     @endforeach
     </div>
-
-
-
 
     {{$cadenas->links()}}
     

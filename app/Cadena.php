@@ -10,7 +10,7 @@ class Cadena extends Model
 <<<<<<< HEAD
     public function hotels()
     {
-        // return $this->hasMany('App\Hotel','cadena_id');
+        // return $this->hasMany('App\Hotel','cadena_id');  
     }
 =======
      public function hotels()

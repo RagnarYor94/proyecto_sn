@@ -14,8 +14,8 @@
         {{ @csrf_field() }}
 >>>>>>> 8b62a16f2c6645add932ae7d00a1cc5ad6562b5e
         <div class="form-group">
-            <label class="text-primary p-1 font-weight-bold" for="nameCadena">Nombre del Hotel</label>
-            <input type="text" class="form-control" name="nombreHotel" placeholder="Ingrese el nombre de la cadena">
+            <label class="text-primary p-1 font-weight-bold" for="nameHotel">Nombre del Hotel</label>
+            <input type="text" class="form-control" id="nameHotel" name="nombreHotel" placeholder="Ingrese el nombre de la cadena">
             <label class="text-primary p-1 font-weight-bold" for="cadenasHoteleras">Cadena Hotelera</label>
             <select class="form-control" name="cadenaHotelera" id="cadenasHoteleras">
 <<<<<<< HEAD
@@ -42,6 +42,16 @@
         </button>
     </div>
 @endif
+
+@if(session('mensajeError'))
+    <div class="alert alert-danger">
+        {{session('mensajeError')}}
+        <button type="button" class="close" data-dismiss="alert" aria-label="close">
+            <span aria-hiden="true">&times;</span>
+        </button>
+    </div>
+
+@endif
 <div class="container mt-3">
     <table class="table">
         <thead class="thead-dark">
@@ -60,7 +70,16 @@
                 
                 <td class="text-center">{{$item->cadena_hotelera}}</td>
                 
-                <td class="text-center">Otto</td>
+                <td class="text-center">
+                    <a href="{{route('catalogoHoteles.editarHoteles',$item->id)}}">
+                        <button type="button" class=" btn btn-warning">Editar</button>
+                    </a>
+                    <form action="{{route('eliminarHotel',$item->id)}}" method="POST" class="d-inline">
+                    @method('DELETE')
+                    @csrf
+                        <button type="submit" class="btn btn-danger">Eliminar</button>
+                    </form>
+                </td>
             </tr>
             
             @endforeach
@@ -68,6 +87,7 @@
     </table>
 </div>
 @endsection
+<<<<<<< HEAD
 =======
     </form>
 
@@ -104,3 +124,5 @@
     </div>
 @endsection
 >>>>>>> 8b62a16f2c6645add932ae7d00a1cc5ad6562b5e
+=======
+>>>>>>> 9a320b23e19968c3b3214b961e9bff4fb4cdfa0e
