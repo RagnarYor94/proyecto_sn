@@ -22,6 +22,39 @@
     @endif
 
     <div class="d-flex flex-wrap bd-highlight mb-3 row-cols-5 mt-2  ">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    @foreach($cadenas as $item)
+    <div class="col m-1" >
+        <div class="row">
+        <div class="card border-dark col" style="max-width: 14rem;padding:0;">
+        <div class="card-header  bg-secondary text-white">Nombre de la Cadena {{$item->id}}</div>
+        <div class="card-body text-dark">
+            <h5 class="card-title">{{$item->cadena_hotelera}}</h5>
+            <a href="{{route('catalogoHoteles.editarCadena',$item)}}">
+            
+            <button type="button" class="btn btn-warning">Editar</button>
+            </a>
+            <form action="{{route('eliminarCadena',$item)}}" method="POST" class="d-inline">
+            @method('DELETE')
+            @csrf
+                <button type="submit" class="btn btn-danger">Eliminar</button>
+            </form>
+        </div>
+        </div>
+    </div>
+    </div>
+
+    
+    @endforeach
+    </div>
+
+    {{$cadenas->links()}}
+    
+@endsection
+=======
+>>>>>>> 3104b909a4eebf1ed5478654a9e2851d0e864d52
         @foreach ($cadenas as $item)
             <div class="col m-1">
                 <div class="row">
