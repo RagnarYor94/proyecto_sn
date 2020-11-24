@@ -36,7 +36,6 @@ Route::get('editarCadena/{id}','CadenaController@editar')->name('catalogoHoteles
 
 Route::put('actualizarCadena/{id}','CadenaController@actualizar')->name('actualizarCadena');
 
-Route::get('locaciones','LocationController@vista')->name('catalogoHoteles.locaciones');
 
 //RUTA DE HOTELES
 
@@ -49,3 +48,9 @@ Route::get('editarHoteles/{id}','HotelController@editarHotel')->name('catalogoHo
 Route::put('actualizarHotel/{id}','HotelController@actualizarHotel')->name('actualizarHotel');
 
 Route::delete('eliminarHotel/{id}','HotelController@eliminarHotel')->name('eliminarHotel');
+
+//RUTA DE LOCACIONES
+
+Route::get('locaciones','LocationController@vista')->name('catalogoHoteles.locaciones');
+
+Route::post('guardarLocacion','LocationControl@guardarLocacion')->name('guardarLocacion');

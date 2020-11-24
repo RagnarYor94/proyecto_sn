@@ -7,7 +7,7 @@
     {{@csrf_field()}}
         <div class="form-group">
             <label class="text-primary p-1 font-weight-bold" for="nameLocacion">Nombre de la Locación</label>
-            <input type="text" class="form-control" name="nombreCadena" id="nameLocacion" placeholder="Ingrese el nombre de la cadena">
+            <input type="text" class="form-control" name="nombreLocacion" id="nameLocacion" placeholder="Ingrese el nombre de la cadena">
         </div>
         <button type="submit" class="btn btn-primary btn-lg">Agregar</button>
     </form>
@@ -18,7 +18,7 @@
     <div class="col m-1" >
         <div class="row">
         <div class="card border-dark col" style="max-width: 14rem;padding:0;">
-        <div class="card-header  bg-secondary text-white">Nombre de la Cadena </div>
+        <div class="card-header  bg-secondary text-white">Nombre de la Locación </div>
         <div class="card-body text-dark">
             <h5 class="card-title"></h5>
             <a href="#">
