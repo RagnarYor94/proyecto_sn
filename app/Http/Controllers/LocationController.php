@@ -12,10 +12,10 @@ class LocationController extends Controller
     {
         return view('catalogoHoteles.locaciones');
     }
-    function guardarLocacion(Request $request)
-    {
-        $nuevaLocacion = new App\Locacion;
+    // function guardarLocacion(Request $request)
+    // {
+    //     // $nuevaLocacion = new App\Locacion;
 
-        $nuevaLocacion = 
-    }
+    //     // $nuevaLocacion = 
+    // }
 }
