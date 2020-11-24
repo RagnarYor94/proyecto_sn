@@ -50,7 +50,18 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $nuevoUsuario = new App\User;
+        $nuevoUsuario->rol_id = $request->nombre_rol;
+        $nuevoUsuario->name = $request->name;
+        $nuevoUsuario->primer_nombre = $request->primer_nombre;
+        $nuevoUsuario->apellido = $request->apellido;
+        $nuevoUsuario->cumpleaños = $request->cumpleaños;
+        $nuevoUsuario->email = $request->email;
+        $nuevoUsuario->password = $request->password;
+
+        $nuevoUsuario->save();
+
+        return redirect(route('usuarios.index'));
     }
 
     /**
