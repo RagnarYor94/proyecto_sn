@@ -27,23 +27,17 @@ class HotelController extends Controller
             'nombreHotel'=>'required',
             'cadenaHotelera' => 'required'
         ]);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
+
         
         if(!$request){
         $cadena = App\Cadena::paginate();
-=======
->>>>>>> 3104b909a4eebf1ed5478654a9e2851d0e864d52
-        //$cadena = App\Cadena::paginate();
+
         $hotel = App\Hotel::paginate();
-=======
+
         if($request->cadenaHotelera != ''){
             if(!$request){
             $cadena = App\Cadena::paginate();
             $hotel = App\Hotel::paginate();
->>>>>>> 9a320b23e19968c3b3214b961e9bff4fb4cdfa0e
 
             $guardarHotel = new App\Hotel;
             $guardarHotel->cadena_id = $request->cadenaHotelera;
@@ -51,22 +45,19 @@ class HotelController extends Controller
 
             $guardarHotel->save();
 
-<<<<<<< HEAD
+
         return back()->with('mensaje','Se agrego con exito el hotel');
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
+
             return back()->with('mensaje','Se agrego con exito el hotel');
             }else{
                 return back()->with('mensajeError','Completa los campos');
             }    
->>>>>>> 9a320b23e19968c3b3214b961e9bff4fb4cdfa0e
+
         }else{
             return back()->with('mensajeError','Completa los campos');
         }
     }
-    public function editarHotel($id)
+     function editarHotel($id)
     {
         $idHotel = $id;
         $cadenas = App\Cadena::paginate();
@@ -75,7 +66,7 @@ class HotelController extends Controller
         
         return view('catalogoHoteles.editarHoteles',compact('db','cadenas','idHotel'));
     }
-    public function actualizarHotel(Request $request,$id)
+     function actualizarHotel(Request $request,$id)
     {
         $hotel = App\Hotel::findOrFail($id);
         $hotel->nombre_hotel = $request->nameHotel;
@@ -85,15 +76,14 @@ class HotelController extends Controller
 
         return redirect('hoteles')->with('mensaje','Se actualizo el registro del Hotel.');
     }
-    public function eliminarHotel($id)
+     function eliminarHotel($id)
     {
         $eliminarCadena = App\Hotel::findOrFail($id);
         $eliminarCadena->delete();
 
         return back()->with('mensaje','Se elimino el hotel correctamente');
     }
-=======
->>>>>>> 3104b909a4eebf1ed5478654a9e2851d0e864d52
+
     }
 
     

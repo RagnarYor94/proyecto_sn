@@ -18,9 +18,7 @@
             </select>
         </div>
         <button type="submit" class="btn btn-primary btn-lg">Agregar</button>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
+
 </form>
 
 @if(session('mensaje'))
@@ -76,9 +74,7 @@
     </table>
 </div>
 @endsection
-<<<<<<< HEAD
-=======
->>>>>>> 3104b909a4eebf1ed5478654a9e2851d0e864d52
+
     </form>
 
     @if (session('mensaje'))
@@ -113,9 +109,4 @@
         </table>
     </div>
 @endsection
-<<<<<<< HEAD
-=======
->>>>>>> 8b62a16f2c6645add932ae7d00a1cc5ad6562b5e
-=======
->>>>>>> 9a320b23e19968c3b3214b961e9bff4fb4cdfa0e
->>>>>>> 3104b909a4eebf1ed5478654a9e2851d0e864d52
+
