@@ -27,23 +27,17 @@ class HotelController extends Controller
             'nombreHotel'=>'required',
             'cadenaHotelera' => 'required'
         ]);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
         
         if(!$request){
         $cadena = App\Cadena::paginate();
-=======
->>>>>>> 3104b909a4eebf1ed5478654a9e2851d0e864d52
+
         //$cadena = App\Cadena::paginate();
         $hotel = App\Hotel::paginate();
-=======
+
         if($request->cadenaHotelera != ''){
             if(!$request){
             $cadena = App\Cadena::paginate();
             $hotel = App\Hotel::paginate();
->>>>>>> 9a320b23e19968c3b3214b961e9bff4fb4cdfa0e
 
             $guardarHotel = new App\Hotel;
             $guardarHotel->cadena_id = $request->cadenaHotelera;
@@ -51,21 +45,17 @@ class HotelController extends Controller
 
             $guardarHotel->save();
 
-<<<<<<< HEAD
+
         return back()->with('mensaje','Se agrego con exito el hotel');
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
             return back()->with('mensaje','Se agrego con exito el hotel');
             }else{
                 return back()->with('mensajeError','Completa los campos');
             }    
->>>>>>> 9a320b23e19968c3b3214b961e9bff4fb4cdfa0e
         }else{
             return back()->with('mensajeError','Completa los campos');
         }
     }
+    
     public function editarHotel($id)
     {
         $idHotel = $id;
@@ -92,9 +82,8 @@ class HotelController extends Controller
 
         return back()->with('mensaje','Se elimino el hotel correctamente');
     }
-=======
->>>>>>> 3104b909a4eebf1ed5478654a9e2851d0e864d52
-    }
+
+    
 
     
     
