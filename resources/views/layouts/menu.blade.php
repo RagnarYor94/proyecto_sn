@@ -4,6 +4,13 @@
     <div class="row" style="margin:0; height:91vh;">
         <div class="p-3 bg-dark col-2">
             <table class="table table-sm">
+                <thead>
+                    <tr class="text-white text-center">
+                        <th scope="col">
+                            <span class="text-strong">Menu</span>
+                        </th>
+                    </tr>
+                </thead>
                 <tbody class="text-white text-center">
                     <tr>
                         <td>
@@ -17,11 +24,13 @@
                                         <a class="text-decoration-none text-white"
                                             href="{{ route('catalogoHoteles.cadena') }}">Cadenas hoteleras</a>
                                     </p>
-                                    <p class="border-bottom text-center text-white" style="margin:8px 0 0 0;"> 
-                                        <a class="text-decoration-none text-white" href="{{route('catalogoHoteles.locaciones')}}">Locaciones</a>
+                                    <p class="border-bottom text-center text-white" style="margin:8px 0 0 0;">
+                                        <a class="text-decoration-none text-white"
+                                            href="{{ route('catalogoHoteles.locaciones') }}">Locaciones</a>
                                     </p>
                                     <p class="text-center text-white" style="margin:8px 0 0 0;">
-                                        <a class="text-decoration-none text-white" href="{{route('catalogoHoteles.hoteles')}}">Hoteles</a>
+                                        <a class="text-decoration-none text-white"
+                                            href="{{ route('catalogoHoteles.hoteles') }}">Hoteles</a>
                                     </p>
                                 </div>
                             </div>
@@ -36,7 +45,8 @@
                                 </p>
                                 <div class="dropdown-menu bg-secondary rounded-lg" style="padding:0;">
                                     <p class="border-bottom text-center text-white" style="margin:8px 0 0 0;">
-                                        <a class="text-decoration-none text-white" href="#">Editar Usuarios</a>
+                                        <a class="text-decoration-none text-white"
+                                            href="{{ route('usuarios.index') }}">Editar Usuarios</a>
                                     </p>
                                     <p class="border-bottom text-center text-white" style="margin:8px 0 0 0;">
                                         <a class="text-decoration-none text-white"

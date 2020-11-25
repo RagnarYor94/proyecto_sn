@@ -25,11 +25,21 @@ Route::get('home', 'HomeController@index')->name('home');
 
 Route::get('usuarios', 'UserController@index')->name('usuarios.index');
 
+Route::get('usuarios/crear', 'UserController@create')->name('usuarios.create');
+
+Route::post('usuarios/crear', 'UserController@store')->name('usuarios.store');
+
+Route::get('usuarios/mostrar/{id}', 'UserController@edit')->name('usuarios.edit');
+
 //Rutas de configuracion de roles
 
 Route::get('roles', 'RolController@index')->name('roles.index');
 
 Route::post('roles', 'RolController@store')->name('roles.store');
+
+Route::get('roles/mostrar/{id}', 'RolController@show')->name('roles.show');
+
+Route::put('roles/mostrar/{id}', 'RolController@update')->name('roles.update');
 
 //Route::get('roles')
 
@@ -64,4 +74,10 @@ Route::delete('eliminarHotel/{id}','HotelController@eliminarHotel')->name('elimi
 
 Route::get('locaciones','LocationController@vista')->name('catalogoHoteles.locaciones');
 
-Route::post('guardarLocacion','LocationControl@guardarLocacion')->name('guardarLocacion');
+Route::post('guardarLocacion','LocationController@guardarLocacion')->name('guardarLocacion');
+
+Route::get('editatLocaciones/{id}','LocationController@editarLocacion')->name('catalogoHoteles.editarLocaciones');
+
+Route::put('actualizarLocacion/{id}','LocationController@actualizarLocacion')->name('actualizarLocacion');
+
+Route::delete('/{id}','LocationController@eliminarLocacion')->name('eliminarLocacion');

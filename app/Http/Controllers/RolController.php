@@ -62,7 +62,10 @@ return back();
      */
     public function show($id)
     {
-        //
+        $rol = App\Rol::findOrFail($id);
+        return view('roles.show', compact('rol'));
+
+
     }
 
     /**
@@ -85,7 +88,14 @@ return back();
      */
     public function update(Request $request, $id)
     {
-        //
+        $rol = App\Rol::findOrFail($id);
+
+        $rol->nombre_rol = $request->nombre_rol;
+        $rol->descripcion = $request->descripcion;
+
+        $rol->save();
+
+       return redirect('roles');
     }
 
     /**
