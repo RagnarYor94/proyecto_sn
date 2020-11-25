@@ -51,6 +51,14 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'nombre_rol'=>'required',
+            'name'=>'required',
+            'primer_nombre'=>'required',
+            'apellido'=>'required',
+            'cum'
+        ]);
+
         $nuevoUsuario = new App\User;
         $nuevoUsuario->rol_id = $request->nombre_rol;
         $nuevoUsuario->name = $request->name;
