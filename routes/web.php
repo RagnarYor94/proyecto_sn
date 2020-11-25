@@ -31,6 +31,10 @@ Route::post('usuarios/crear', 'UserController@store')->name('usuarios.store');
 
 Route::get('usuarios/mostrar/{id}', 'UserController@edit')->name('usuarios.edit');
 
+Route::put('usuarios/mostrar/{id}', 'UserController@update')->name('usuarios.update');
+
+Route::delete('usuarios/mostrar{id}', 'UserController@destroy')->name('usuario.destroy');
+
 //Rutas de configuracion de roles
 
 Route::get('roles', 'RolController@index')->name('roles.index');
@@ -41,7 +45,7 @@ Route::get('roles/mostrar/{id}', 'RolController@show')->name('roles.show');
 
 Route::put('roles/mostrar/{id}', 'RolController@update')->name('roles.update');
 
-//Route::get('roles')
+Route::delete('roles/eliminar/{id}','RolController@destroy')->name('roles.destroy');
 
 
 

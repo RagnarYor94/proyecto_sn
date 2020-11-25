@@ -11,6 +11,7 @@ use App\User;
 use DB;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\App as FacadesApp;
 
 class UserController extends Controller
 {
@@ -61,7 +62,7 @@ class UserController extends Controller
 
         $nuevoUsuario->save();
 
-        return redirect(route('usuarios.index'));
+        return redirect('usuarios');
     }
 
     /**
@@ -99,7 +100,23 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'nombre_rol'=>'required'
+        ]);
+
+        $actualizarUsuario = App\User::findOrFail($id);
+        $actualizarUsuario->rol_id = $request->nombre_rol;
+        $actualizarUsuario->name = $request->name;
+        $actualizarUsuario->primer_nombre = $request->primer_nombre;
+        $actualizarUsuario->apellido = $request->apellido;
+        $actualizarUsuario->cumpleaños = $request->cumpleaños;
+        $actualizarUsuario->email = $request->email;
+        $actualizarUsuario->password = $request->password;
+
+        $actualizarUsuario->save();
+
+        return redirect('usuarios');
+
     }
 
     /**
@@ -110,6 +127,9 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $eliminarUsuario = App\User::findOrFail($id);
+        $eliminarUsuario->delete();
+
+        return back();
     }
 }

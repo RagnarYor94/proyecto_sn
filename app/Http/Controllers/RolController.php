@@ -106,6 +106,9 @@ return back();
      */
     public function destroy($id)
     {
-        //
+        $rol = App\Rol::findOrFail($id);
+        $rol->delete();
+
+        return back();
     }
 }

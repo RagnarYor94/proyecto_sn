@@ -35,6 +35,11 @@
                         <td class="text-center">{{ $user->email }}</td>
                         <td class="text-center"><a href="{{ route('usuarios.edit', $user->id) }}"
                                 class="btn btn-warning">Editar</a>
+                            <form action="{{ route('usuario.destroy', $user->id) }}" method="POST" class="d-inline">
+                                @method('DELETE')
+                                @csrf
+                                <button type="submit" class="btn btn-danger">Eliminar</button>
+                            </form>
                         </td>
                 </tr>
                 @endforeach

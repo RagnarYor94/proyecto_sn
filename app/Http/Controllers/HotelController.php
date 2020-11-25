@@ -28,8 +28,8 @@ class HotelController extends Controller
             'cadenaHotelera' => 'required'
         ]);
         
-        if(!$request){
-        $cadena = App\Cadena::paginate();
+        // if(!$request){
+        // $cadena = App\Cadena::paginate();
 
         //$cadena = App\Cadena::paginate();
         $hotel = App\Hotel::paginate();
@@ -85,7 +85,5 @@ class HotelController extends Controller
 
     
 
-    
-    
-    
+
 }
