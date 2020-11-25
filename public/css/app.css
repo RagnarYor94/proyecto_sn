@@ -10912,7 +10912,7 @@ a.text-dark:focus {
   color: #298fe2;
 }
 
-/*.formulariocreacion {
-  border: 2px solid var(--gray-dark);
-  padding: 5px;
+#bienvenido {
+  color: #e3342f;
 }
+
