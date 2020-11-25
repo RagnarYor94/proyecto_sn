@@ -22,10 +22,6 @@ class HotelController extends Controller
         // ->select('cadenas.cadena_hotelera','hotels.nombre_hotel','hotels.id')
         // ->get();
 
-        // $query = DB::table('locations')->join('hotels','hotels.locacion_id','=','locations.id')
-        // ->select('locations.localidad_nombre')
-        // ->union($cadenas)
-        // ->get(); 
 
         $query = DB::table('hotels')->join('cadenas','cadenas.id','=','hotels.cadena_id')
         ->join('locations','locations.id','=','hotels.locacion_id')

@@ -24,7 +24,7 @@
         </div>
     </div>
 
-    <div class="col m-3" style="max-width: 67rem">
+    <div class="m-3">
         <table class="table">
             <thead class="thead-dark">
                 <tr>
@@ -42,6 +42,11 @@
                         <td class="text-center">{{ $rol->descripcion }}</td>
                         <td class="text-center">
                             <a href="{{ route('roles.show', $rol) }}" class=" btn btn-warning">Editar</a>
+                            <form action="{{ route('roles.destroy', $rol->id) }}" method="POST" class="d-inline">
+                                @method('DELETE')
+                                @csrf
+                                <button class="btn btn-danger">Eliminar</button>
+                            </form>
                         </td>
                 </tr>
                 @endforeach

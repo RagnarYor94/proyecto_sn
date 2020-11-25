@@ -7,7 +7,7 @@
                 <thead>
                     <tr class="text-white text-center">
                         <th scope="col">
-                            <span class="text-strong">Menu</span>
+                            <span class="text-strong">Men</span>
                         </th>
                     </tr>
                 </thead>

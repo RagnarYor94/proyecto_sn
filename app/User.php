@@ -40,6 +40,9 @@ class User extends Authenticatable
 
     public function setPasswordAttribute($password)
     {   
+        if (trim($password) === '' ) {
+            return;
+        }
         $this->attributes['password'] = Hash::make($password);
     }
 }

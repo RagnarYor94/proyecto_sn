@@ -2,13 +2,14 @@
 
 @section('body')
 
-<h1 class="title m-3">Hoteles</h1>
+    <h1 class="title m-3">Hoteles</h1>
 
-<form action="{{route('guardarHotel')}}" method="POST" class="m-3">
-    {{@csrf_field()}}
+    <form action="{{ route('guardarHotel') }}" method="POST" class="m-3">
+        {{ @csrf_field() }}
         <div class="form-group">
             <label class="text-primary p-1 font-weight-bold" for="nameHotel">Nombre del Hotel</label>
-            <input type="text" class="form-control" id="nameHotel" name="nombreHotel" placeholder="Ingrese el nombre de la cadena">
+            <input type="text" class="form-control" id="nameHotel" name="nombreHotel"
+                placeholder="Ingrese el nombre de la cadena">
             <label class="text-primary p-1 font-weight-bold" for="cadenasHoteleras">Cadena Hotelera</label>
             <select class="form-control" name="cadenaHotelera" id="cadenasHoteleras">
                 <option selected >Seleciona una Cadena</option>
